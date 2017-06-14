@@ -4,11 +4,11 @@ html {
 
 body {
   background-attachment: fixed;
-  background-color: #ACACAC;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: left;
+  background-image: url("../images/contoso_bg.jpg");
 }
 
 .container {
@@ -37,6 +37,8 @@ body {
 
 .panel-default { 
     min-width: 350px;
+    margin-bottom: 0;
+    background-color: rgba(255,255,255,0.8);
 }
 
 @media (min-width: 480px) {

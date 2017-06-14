@@ -14,22 +14,25 @@
 .unified_container {
   .row {
     .panel-default {
-      height: 750px;
+      height: 100%;
       .panel-body{
         padding: 15px 30px;
         max-width: 520px;
         margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
         .companyName {
           margin-top: 90px;
           font-size: 48px;
           margin-bottom: 45px;
-        }
-        .companyLogo {
           display: none;
         }
+        .companyLogo {
+          display: block;
+        }
         img {
-          width: 80px;
-          height: 70px;
+          width: 235px;
+          height: 95px;
           margin: 0 auto;
           display: block;
         }
@@ -46,9 +49,10 @@
           display: none;
         }
         .localAccount {
-          top: 10px;
           width: 100%;
           position: relative;
+          float: right;
+          margin-top: -360px;
           .entry {
             .buttons {
               margin: 15px 0 23px 0;
@@ -150,9 +154,10 @@
         }
 
         .social {
-          position: absolute;
-          top: 440px;
-          width: 450px;
+          position: relative;
+          float: right;
+          width: 100%;
+          margin-top: 250px;
           .accountButton {
             border: none;
             border-radius: 2px;
@@ -165,6 +170,11 @@
             border: none;
           }
         }
+      }
+      #api:after {
+        content: " ";
+        display: block;
+        clear: both;
       }
     }
   }
@@ -230,14 +240,17 @@
           .companyLogo {
             display: block;
           }
+          img {
+            width: 150px;
+            height: 60px;
+          }
           h3 {
             display: block;
           }
           #api {
             width: 325px;
             .social {
-              top: 370px;
-              width: 325px;
+              margin-top: 200px;
               .options {
                 .accountButton {
                   height: 40px;
@@ -264,7 +277,7 @@
             }
 
             .localAccount {
-              top: 20px;
+              margin-top: -290px;
               .entry {
                 .entry-item {
                   display: block;

@@ -202,20 +202,23 @@
 
 /** Unified Signup Signin Page Styles **/
 .unified_container .row .panel-default {
-  height: 750px; }
+  height: 100%; }
   .unified_container .row .panel-default .panel-body {
     padding: 15px 30px;
     max-width: 520px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px; }
     .unified_container .row .panel-default .panel-body .companyName {
       margin-top: 90px;
       font-size: 48px;
-      margin-bottom: 45px; }
-    .unified_container .row .panel-default .panel-body .companyLogo {
+      margin-bottom: 45px;
       display: none; }
+    .unified_container .row .panel-default .panel-body .companyLogo {
+      display: block; }
     .unified_container .row .panel-default .panel-body img {
-      width: 80px;
-      height: 70px;
+      width: 235px;
+      height: 95px;
       margin: 0 auto;
       display: block; }
     .unified_container .row .panel-default .panel-body h3 {
@@ -226,9 +229,10 @@
   .unified_container .row .panel-default #api .divider {
     display: none; }
   .unified_container .row .panel-default #api .localAccount {
-    top: 10px;
     width: 100%;
-    position: relative; }
+    position: relative;
+    float: right;
+    margin-top: -360px; }
     .unified_container .row .panel-default #api .localAccount .entry .buttons {
       margin: 15px 0 23px 0; }
       .unified_container .row .panel-default #api .localAccount .entry .buttons button {
@@ -308,9 +312,10 @@
       -o-transition: 0.5s all;
       -webkit-transition: 0.5s all; }
   .unified_container .row .panel-default #api .social {
-    position: absolute;
-    top: 440px;
-    width: 450px; }
+    position: relative;
+    float: right;
+    width: 100%;
+    margin-top: 250px; }
     .unified_container .row .panel-default #api .social .accountButton {
       border: none;
       border-radius: 2px;
@@ -320,6 +325,10 @@
       width: 100%; }
     .unified_container .row .panel-default #api .social .accountButton:hover {
       border: none; }
+  .unified_container .row .panel-default #api:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 /** Social Button Styles **/
 #FacebookExchange {
@@ -377,13 +386,15 @@
         display: none; }
       .unified_container .row .panel-default .panel-body .companyLogo {
         display: block; }
+      .unified_container .row .panel-default .panel-body img {
+        width: 150px;
+        height: 60px; }
       .unified_container .row .panel-default .panel-body h3 {
         display: block; }
       .unified_container .row .panel-default .panel-body #api {
         width: 325px; }
         .unified_container .row .panel-default .panel-body #api .social {
-          top: 370px;
-          width: 325px; }
+          margin-top: 200px; }
           .unified_container .row .panel-default .panel-body #api .social .options .accountButton {
             height: 40px; }
           .unified_container .row .panel-default .panel-body #api .social .options #FacebookExchange {
@@ -402,7 +413,7 @@
             background-position-y: 14px;
             margin-bottom: 10px; }
         .unified_container .row .panel-default .panel-body #api .localAccount {
-          top: 20px; }
+          margin-top: -290px; }
           .unified_container .row .panel-default .panel-body #api .localAccount .entry .entry-item {
             display: block;
             width: 100%;
@@ -430,11 +441,11 @@ html {
 
 body {
   background-attachment: fixed;
-  background-color: #ACACAC;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: left; }
+  text-align: left;
+  background-image: url("../images/contoso_bg.jpg"); }
 
 .container {
   text-align: center;
@@ -457,7 +468,9 @@ body {
   vertical-align: middle; }
 
 .panel-default {
-  min-width: 350px; }
+  min-width: 350px;
+  margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); }
 
 @media (min-width: 480px) {
   .row .panel-default {
