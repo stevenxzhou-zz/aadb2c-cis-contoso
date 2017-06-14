@@ -11,36 +11,6 @@ body {
   background-image: url("../images/contoso_bg.jpg");
 }
 
-.container {
-    text-align: center;
-    width: 100%;
-    display: table;
-    height: 100vh;
-}
-
-#api {
-    margin: 0 auto;
-}
-
-.col-lg-6 {
-    float: none;
-    display: inline-block;
-    padding: 0;
-}
-
-.row {
-    width: 100%;
-    margin: 0;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.panel-default { 
-    min-width: 350px;
-    margin-bottom: 0;
-    background-color: rgba(255,255,255,0.8);
-}
-
 @media (min-width: 480px) {
     .row {
         .panel-default {

@@ -42,12 +42,6 @@
         } 
       }
       #api {
-        .intro {
-          display: none;
-        }
-        .divider {
-          display: none;
-        }
         .localAccount {
           width: 100%;
           position: relative;
@@ -91,9 +85,6 @@
             .entry-item {
               width: 49.5%;
               display: inline-block;
-              label {
-                display: none;
-              }
               
               // Email and Password Input
               #logonIdentifier,
@@ -126,11 +117,6 @@
                 #forgotPassword {
                   clear: right;
                   cursor: pointer;
-                  transition: 0.5s all;
-                  -moz-transition: 0.5s all;
-                  -ms-transition: 0.5s all;
-                  -o-transition: 0.5s all;
-                  -webkit-transition: 0.5s all;
                 }
               }
             }
@@ -144,11 +130,6 @@
             #createAccount{
               cursor: pointer;
               padding-left:2px;
-              transition: 0.5s all;
-              -moz-transition: 0.5s all;
-              -ms-transition: 0.5s all;
-              -o-transition: 0.5s all;
-              -webkit-transition: 0.5s all;
             }
           }
         }

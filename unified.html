@@ -11,6 +11,58 @@
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <style rel="stylesheet" type="text/css">
+    /** General layouts stay here used to avoid flickering **/
+    .container {
+        text-align: center;
+        width: 100%;
+        display: table;
+        height: 100vh;
+    }
+
+    #api {
+        margin: 0 auto;
+    }
+
+    .col-lg-6 {
+        float: none;
+        display: inline-block;
+        padding: 0;
+    }
+
+    .row {
+        width: 100%;
+        margin: 0;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .panel-default { 
+        min-width: 350px;
+        margin-bottom: 0;
+        background-color: rgba(255,255,255,0.8);
+    }
+    
+    .panel-body{
+        padding: 15px 30px;
+        max-width: 520px;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .entry-item label {
+      display: none;
+    }
+
+    #api .intro {
+      display: none;
+    }
+    
+    #api .divider {
+      display: none;
+    }
+    </style>
   </head>
   <body>
     <div class="container unified_container">
@@ -22,6 +74,68 @@
               <img class="companyLogo" src="images/contoso_logo.png">
               <h3 class="text-center">Sign In</h3>
               <div id="api" data-name="Unified">   
+                <div class="social" role="form">
+                  <div class="intro">
+                    <h2>Sign in with your social account</h2>
+                  </div>
+                  <div class="options">
+                    <div>
+                      <button class="accountButton firstButton" id="FacebookExchange" tabindex="1">Facebook</button>
+                    </div>
+                    <div>
+                      <button class="accountButton" id="GoogleExchange" tabindex="1">Google</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="divider">
+                  <h2>OR</h2>
+                </div>
+
+                <div class="localAccount" role="form">
+                  <div class="intro">
+                    <h2>
+                      Sign in with your existing account
+                    </h2>
+                  </div>
+                  <div class="error pageLevel" aria-hidden="true" style="display: none;">
+                    <p role="alert"></p>
+                  </div>
+                  <div class="entry">
+                    <div class="entry-item">
+                      <label for="logonIdentifier">
+                        Email Address
+                      </label>
+                      <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                        <p role="alert"></p>
+                      </div>
+                      <input type="email" id="logonIdentifier" name="Username or email address" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="Email Address" value="" tabindex="1">
+                    </div>
+                    <div class="entry-item">
+                      <div class="password-label">
+                        <label for="password">Password</label>
+                        <a id="forgotPassword" tabindex="2" href="/cpimreflector.onmicrosoft.com/B2C_1_unified/api/CombinedSigninAndSignup/forgotPassword?csrf_token=bTc1bSs1dFBKNnJ5bUJXUFB5Z0Qrd3A4N3M0aE9CUUVMWXRPNmg3RlY3SmRUSkJ4ZjN2WENEV29KZFNqMis5NCtCMExFazZERDk1eldxV0k5YW9SbEE9PTsyMDE3LTA2LTE0VDE5OjI4OjMxLjgwMzA4OTRaO2RONE5BVHZWMENORytjS2JZczdsYmc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=eyJUSUQiOiIzODBmMjhlMy1mNjFkLTRjOGUtOWFhMi1iODU1YjY0Y2MwMDAifQ&amp;p=B2C_1_unified">Forgot your password?</a>
+                      </div>
+                      <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                        <p role="alert"></p>
+                      </div>
+                      <input type="password" id="password" name="Password" placeholder="Password" tabindex="1">
+                    </div>
+                    <div class="working"></div>
+                    <div class="buttons">
+                      <button id="next" tabindex="1">Sign in</button>
+                    </div>
+                  </div>
+
+                  <div class="divider">
+                    <h2>OR</h2>
+                  </div>
+                  <div class="create">
+                    <p>
+                      Don't have an account?<a id="createAccount" tabindex="1" href="/cpimreflector.onmicrosoft.com/B2C_1_unified/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=bTc1bSs1dFBKNnJ5bUJXUFB5Z0Qrd3A4N3M0aE9CUUVMWXRPNmg3RlY3SmRUSkJ4ZjN2WENEV29KZFNqMis5NCtCMExFazZERDk1eldxV0k5YW9SbEE9PTsyMDE3LTA2LTE0VDE5OjI4OjMxLjgwMzA4OTRaO2RONE5BVHZWMENORytjS2JZczdsYmc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=eyJUSUQiOiIzODBmMjhlMy1mNjFkLTRjOGUtOWFhMi1iODU1YjY0Y2MwMDAifQ&amp;p=B2C_1_unified">Sign up now</a>
+                    </p>
+                  </div>
+                </div>
               </div>
               </div>
             </div>

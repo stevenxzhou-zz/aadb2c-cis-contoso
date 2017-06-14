@@ -224,10 +224,6 @@
     .unified_container .row .panel-default .panel-body h3 {
       font-size: 24px;
       display: none; }
-  .unified_container .row .panel-default #api .intro {
-    display: none; }
-  .unified_container .row .panel-default #api .divider {
-    display: none; }
   .unified_container .row .panel-default #api .localAccount {
     width: 100%;
     position: relative;
@@ -267,8 +263,6 @@
     .unified_container .row .panel-default #api .localAccount .entry .entry-item {
       width: 49.5%;
       display: inline-block; }
-      .unified_container .row .panel-default #api .localAccount .entry .entry-item label {
-        display: none; }
       .unified_container .row .panel-default #api .localAccount .entry .entry-item #logonIdentifier,
       .unified_container .row .panel-default #api .localAccount .entry .entry-item #password {
         background-color: #fff !important;
@@ -295,22 +289,12 @@
         left: 0px; }
         .unified_container .row .panel-default #api .localAccount .entry .entry-item .password-label #forgotPassword {
           clear: right;
-          cursor: pointer;
-          transition: 0.5s all;
-          -moz-transition: 0.5s all;
-          -ms-transition: 0.5s all;
-          -o-transition: 0.5s all;
-          -webkit-transition: 0.5s all; }
+          cursor: pointer; }
     .unified_container .row .panel-default #api .localAccount .create p {
       text-align: left; }
     .unified_container .row .panel-default #api .localAccount .create #createAccount {
       cursor: pointer;
-      padding-left: 2px;
-      transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -ms-transition: 0.5s all;
-      -o-transition: 0.5s all;
-      -webkit-transition: 0.5s all; }
+      padding-left: 2px; }
   .unified_container .row .panel-default #api .social {
     position: relative;
     float: right;
@@ -446,31 +430,6 @@ body {
   background-size: cover;
   text-align: left;
   background-image: url("../images/contoso_bg.jpg"); }
-
-.container {
-  text-align: center;
-  width: 100%;
-  display: table;
-  height: 100vh; }
-
-#api {
-  margin: 0 auto; }
-
-.col-lg-6 {
-  float: none;
-  display: inline-block;
-  padding: 0; }
-
-.row {
-  width: 100%;
-  margin: 0;
-  display: table-cell;
-  vertical-align: middle; }
-
-.panel-default {
-  min-width: 350px;
-  margin-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8); }
 
 @media (min-width: 480px) {
   .row .panel-default {
